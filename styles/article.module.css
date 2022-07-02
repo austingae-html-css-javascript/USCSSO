@@ -1,0 +1,25 @@
+.article {
+  width: 350px;
+  margin-inline: auto;
+
+  margin-top: 1rem;
+}
+
+.article__image {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.article__author {
+  font-size: 13px;
+}
+
+.article__date {
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+}
+
+.article__content {
+  font-size: 14px;
+}

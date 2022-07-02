@@ -7,6 +7,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+import styles from '../styles/articles.module.css'
+
 const Articles = ({articles}) => {
   console.log(articles);
   return (
@@ -17,15 +19,18 @@ const Articles = ({articles}) => {
       <main>
         {articles.map((article) => {
           return (
-            <Link href={`/articles/${article.data.slug}`}>
-              <div>
-                  <img src={article.data.image} style={{width: '300px'}}/>
-                  <h3>{article.data.title}</h3>
-                  <p>{article.data.author}</p>
-                  <p>{article.data.date}</p>
-                  <p>{article.data.excerpt}</p>
-              </div>
-            </Link>
+            <>
+              <Link href={`/articles/${article.data.slug}`}>
+                <div className={styles.article}>
+                    <img className={styles.article__image} src={article.data.image} />
+                    <h3 className={styles.article__title}>{article.data.title}</h3>
+                    <p className={styles.article__author}>{article.data.author}</p>
+                    <p className={styles.article__date}>{article.data.date}</p>
+                    <p className={styles.article__excerpt}>{article.data.excerpt}</p>
+                </div>
+              </Link>
+              <hr className={styles.article__linebreak}></hr>
+            </>
           );
         })}
       </main>

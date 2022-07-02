@@ -3,10 +3,17 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+
+import styles from '../../styles/article.module.css'
+
 const Article = ({articleObject}) => {
   return (
-    <main>
-      <ReactMarkdown>{articleObject.content}</ReactMarkdown>
+    <main className={styles.article}>
+      <h2 className={styles.article__title}>{articleObject.data.title}</h2>
+      <img className={styles.article__image} src={articleObject.data.image} />
+      <p className={styles.article__author}>{articleObject.data.author}</p>
+      <p className={styles.article__date}>{articleObject.data.date}</p>
+      <ReactMarkdown className={styles.article__content}>{articleObject.content}</ReactMarkdown>
     </main>
   )
 }
