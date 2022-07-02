@@ -20,7 +20,7 @@ const About = ({teamMemberList}) => {
       <section className={styles['meet-our-team']}>
         <h1 className={`${styles['meet-our-team__title']} ${styles['meet-our-team__title--large-size']}`}>MEET OUR TEAM</h1>
         <hr className={`${styles['our-story__line']} ${styles['our-story__line--long-size']}`} />
-      {teamMemberList.map((key, teamMember) => {
+      {teamMemberList.map((teamMember) => {
         return (
           <div className={styles['team-member']} key={teamMember.name}>
             <div className={styles['team-member__image-container']}>
