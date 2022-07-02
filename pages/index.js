@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
 //import fs from 'fs'
 //import path from 'path'
 
