@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
           <h1 className="nav-bar__org-name">USCSS</h1>
           <Image 
           className='nav-bar__logo'
+          alt={"Hello, there"}
           src={logo}
           width={'40px'}
           height={'40px'}
@@ -91,16 +92,16 @@ function MyApp({ Component, pageProps }) {
           </div>
           
           <div className='menu__social-media-container'>
-            <a href='https://www.facebook.com/USCSSO' target='_blank'>
+            <a href='https://www.facebook.com/USCSSO' target='_blank' rel="noreferrer">
               <FontAwesomeIcon className='menu__social-media-icon menu__facebook-icon' icon={faFacebook} size="2x"/>
             </a>
-            <a href='https://www.linkedin.com/company/uscssogwu/' target='_blank'>
+            <a href='https://www.linkedin.com/company/uscssogwu/' target='_blank' rel="noreferrer">
               <FontAwesomeIcon className='menu__social-media-icon menu__linkedin-icon' icon={faLinkedin} size="2x"/>
             </a>
-            <a href='https://www.instagram.com/uschinasso/' target='_blank'>
+            <a href='https://www.instagram.com/uschinasso/' target='_blank' rel="noreferrer">
               <FontAwesomeIcon className='menu__social-media-icon menu__instagram-icon' icon={faInstagram} size="2x"/>
             </a>
-            <a href='https://twitter.com/uscsso' target='_blank'>
+            <a href='https://twitter.com/uscsso' target='_blank' rel="noreferrer">
               <FontAwesomeIcon className='menu__social-media-icon menu__twitter-icon' icon={faTwitter} size="2x"/>
             </a>
           </div>
