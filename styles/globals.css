@@ -1,16 +1,144 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+* {
+  box-sizing: content-box;
+  margin: 0rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-a {
-  color: inherit;
+:root {
+  --blue-color: rgb(0,40,104);
+  --red-color: rgb(255,63,63);
+  --light-black-color: rgb(43,43,43);
+  --black-color: rgb(0,0,0);
+  --white-color: rgb(255,255,255);
+  --light-white-color: rgb(250,250,250);
+  --light-light-white-color: rgba(255,255,255,0.8);
+  --light-gray-color: rgb(213,213,213);
+  --gray-color: rgb(170,170,170);
+
+  --facebook-color: rgb(64,100,173);
+  --linkedin-color: rgb(1,118,181);
+  --instagram-color: rgb(247,83,84);
+  --twitter-color: rgb(30,155,240);
+  --gw-engage-color: rgb(97,182,84);
+}
+
+.nav-bar {
+  width: auto;
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+  /*
+  Parent Div's Width = Child Div's Width + Padding + Border + Margin
+  375px = width: auto, so (327px) + (24px + 24px) + 0px + 0px
+  */
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+
+  border-bottom-style: solid;
+  border-color: var(--blue-color);
+  border-width: 0.3rem;
+}
+
+.nav-bar__left-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar__org-name {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--blue-color);
+}
+
+.nav-bar__org-logo {
+  width: 3.2rem;
+}
+
+.nav-bar__right-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar__hamburger-menu-button {
+  background-color: var(--white-color);
+  padding: 0px;
+  border: none;
+}
+.nav-bar__hamburger-menu-icon {
+  color: var(--black-color);
+}
+
+.nav-bar__link {
+  display: none;
+}
+
+.menu-links, .menu-links:link, .menu-links:hover, .menu-links:active {
+  color: #FFFAFA;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.menu {
+  width: 100%;
+  padding: 0rem;
+
+  background-color: var(--blue-color);
+
+  position: fixed;
+  left: -100%;
+}
+
+.menu__x-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.menu__links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+
+.menu__links {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu__links--margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.menu__links-social-media-container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__facebook-icon {
+  color: var(--facebook-color);
+}
+
+.menu__linkedin-icon {
+  color: var(--linkedin-color);
+}
+
+.menu__instagram-icon {
+  color: var(--instagram-color);
+}
+
+.menu__twitter-icon {
+  color: var(--twitter-color);
+}
+
+.menu__facebook-icon, 
+.menu__linkedin-icon, 
+.menu__instagram-icon {
+  margin-right: 1.5rem;
 }
