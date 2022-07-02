@@ -1,0 +1,122 @@
+/*OUR STORY*/
+
+.our-story {
+  width: 360px;
+  margin: auto;
+  /*
+  Parent Div's Width = Child Div's Width + Padding + Border + Margin
+  375px = 360px + 0px + 0px + margin: auto, so (7.5px + 7.5px) 
+  */
+}
+
+.our-story__title {
+  text-align: center;
+
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.our-story__line {
+  margin: 0rem auto 0rem auto;
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  color: var(--red-color);
+}
+
+.our-story__line--short-size {
+  width: 40%;
+}
+
+.our-story__line--long-size {
+  width: 80%;
+}
+
+.our-story__description {
+  color: var(--light-white-color);
+  background-color: var(--red-color);
+  padding: 0.7rem;
+  font-size: 14px;
+  line-height: 1.3rem;
+
+  margin-bottom: 1rem;
+}
+
+.our-story__description--rounded-corners-version-1 {
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.our-story__description--rounded-corners-version-2 {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.our-story__logo-container {
+  text-align: center;
+}
+
+.our-story__logo {
+  width: 110px;
+}
+
+/*MEET OUR TEAM*/
+.meet-our-team__title {
+  text-align: center;
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.meet-our-team__title--large-size {
+  font-size: 30px;
+}
+
+.meet-our-team__description {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.meet-our-team-red-color {
+  color: var(--red-color);
+}
+
+.team-member {
+  width: min(95%, 400px);
+  margin: 0rem auto 0rem auto;
+
+  /*
+  Parent Div's Width = Parent Div's Width + Padding + Border + Margin
+  375px = 356.25px + 0px + 0px + margin: 0rem auto 0rem auto, so (9.375px + 9.375px) 
+  */
+
+  display: flex;
+  flex-direction: row;
+
+  /*Spacing Between .team-member*/
+  margin-bottom: 2rem;
+}
+
+.team-member__image {
+  width: 100px;
+  display: block;
+
+  border-radius: 40px;
+
+}
+
+.team-member__description-container {
+  width: auto;
+  padding: 0.3rem 0.5rem 0.5rem 1.5rem;
+}
+
+.team-member__name {
+  margin-bottom: 1rem;
+}
+
+.team-member--font-size-large {
+  font-size: 20px;
+}
+
+.team-member--font-size-small {
+  font-size: 13px;
+}

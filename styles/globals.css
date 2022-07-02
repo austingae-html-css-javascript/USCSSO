@@ -86,6 +86,8 @@
 
   position: fixed;
   left: -100%;
+
+  z-index: 100;
 }
 
 .menu__x-button {

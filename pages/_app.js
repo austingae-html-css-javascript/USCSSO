@@ -15,6 +15,8 @@ import { faFacebook, faLinkedin, faInstagram, faTwitter } from '@fortawesome/fre
 
 import logo from '../public/images/uscsso-logo.png'
 
+
+
 function HideMenu() {
   document.querySelector('.menu').style.cssText = 'left: -100%; transition-property: left; transition-duration: 1s;';
 }
@@ -23,7 +25,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Navigation Bar*/}
-      <nav className='nav-bar'>
+      <nav className={'nav-bar'}>
         <div className='nav-bar__left-container'>
           <h1 className="nav-bar__org-name">USCSS</h1>
           <Image 
