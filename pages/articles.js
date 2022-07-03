@@ -9,6 +9,8 @@ import matter from 'gray-matter'
 
 import styles from '../styles/articles.module.css'
 
+import ArticleTemplate from '../components/articles/article_template'
+
 const Articles = ({articles}) => {
   console.log(articles);
   return (
@@ -19,18 +21,14 @@ const Articles = ({articles}) => {
       <main>
         {articles.map((article) => {
           return (
-            <>
-              <Link href={`/articles/${article.data.slug}`}>
-                <div className={styles.article}>
-                    <img className={styles.article__image} src={article.data.image} />
-                    <h3 className={styles.article__title}>{article.data.title}</h3>
-                    <p className={styles.article__author}>{article.data.author}</p>
-                    <p className={styles.article__date}>{article.data.date}</p>
-                    <p className={styles.article__excerpt}>{article.data.excerpt}</p>
-                </div>
-              </Link>
-              <hr className={styles.article__linebreak}></hr>
-            </>
+            <ArticleTemplate 
+            title={article.data.title}
+            image={article.data.image}
+            author={article.data.author}
+            date={article.data.date}
+            excerpt={article.data.excerpt}
+            slug={article.data.slug}
+            />
           );
         })}
       </main>

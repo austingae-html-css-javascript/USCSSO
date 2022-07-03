@@ -1,16 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/index.module.css'
 
 import matter from 'gray-matter'
-//import fs from 'fs'
-//import path from 'path'
+import fs from 'fs'
+import path from 'path'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faSchool } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faLinkedin, faInstagram, faTwitter, } from '@fortawesome/free-brands-svg-icons';
 
-export default function Home() {
+import UpcomingEventTemplate from '../components/events/upcoming_event_template'
+
+import ArticleTemplate from '../components/articles/article_template'
+
+export default function Home({upcomingEvents, articles}) {
   return (
     <>
       <Head>
@@ -53,17 +57,40 @@ export default function Home() {
 
         <section>
           <div className={styles["our-upcoming-event"]}>
-            <h2 className={styles["our-upcoming-event__title"]}>Our Upcoming Event!</h2>
+            <h2 className={styles["our-upcoming-event__title"]}>Our Upcoming Events!</h2>
+            {upcomingEvents.map((upcomingEvent) => {
+              return (
+                <UpcomingEventTemplate 
+                  title={upcomingEvent.data.title} 
+                  dateAndLocation={upcomingEvent.data.dateAndLocation} 
+                  description={upcomingEvent.data.description} 
+                  image={upcomingEvent.data.image}
+                  rsvp_form_link={upcomingEvent.data.signUpLink}
+      
+                  key={upcomingEvent.data.title}
+                />
+              );
+            })}
           </div>
         </section>
 
         <section>
-          <div className={styles["articles-projects"]}>
-            <h2 className={styles["articles-projects__title"]}>Check Out Our Articles And Projects!</h2>
-            <div className={styles["articles-projects__button-container"]}>
-              <button className={`${styles["articles-projects__button"]} ${styles["articles-projects__button--margin-right"]} ${styles["articles-projects__button--red-color"]}`}>Articles</button>
-              <button className={`${styles["articles-projects__button"]}  ${styles["articles-projects__button--blue-color"]}`}>Projects</button>
-            </div>
+          <div className={styles["articles"]}>
+            <h2 className={styles["articles__title"]}>Check Out Our Articles!</h2>
+            {articles.map((article) => {
+              return (
+                <ArticleTemplate 
+                  title={article.title}
+                  image={article.image}
+                  author={article.author}
+                  date={article.date}
+                  excerpt={article.excerpt}
+                  slug={article.slug}
+
+                  key={article.title}
+                />
+              );
+            })}
           </div>
         </section>
 
@@ -88,4 +115,36 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export async function getStaticProps() {
+  //Upcoming Events
+  const upcomingEventFilesList = fs.readdirSync(path.join('events', 'upcoming-events'));
+
+  const upcomingEvents = [];
+  upcomingEventFilesList.forEach((upcomingEvent) => {
+    const rawUpcomingEvent = fs.readFileSync(path.join('events', 'upcoming-events', upcomingEvent), 'utf-8');
+    const upcomingEventObject = matter(rawUpcomingEvent);
+    upcomingEvents.push(upcomingEventObject);
+  });
+
+  //Articles
+  const articleFilesList = fs.readdirSync('articles');
+  const articles = [];
+
+  articleFilesList.forEach((article) => {
+    const rawArticle = fs.readFileSync(path.join('articles', article), 'utf-8');
+    const articleObject = matter(rawArticle);
+    const articleObjectData = articleObject.data;
+    articles.push(articleObjectData);
+  })
+
+  console.log(articles);
+
+  return {
+    props: {
+      upcomingEvents: JSON.parse(JSON.stringify(upcomingEvents)),
+      articles: JSON.parse(JSON.stringify(articles)),
+    }
+  }
 }
