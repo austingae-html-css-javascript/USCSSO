@@ -27,6 +27,8 @@ const Events = ({pastEvents, upcomingEvents}) => {
             description={upcomingEvent.data.description} 
             image={upcomingEvent.data.image}
             rsvp_form_link={upcomingEvent.data.signUpLink}
+
+            key={upcomingEvent.data.title}
         />
         );
       })}
@@ -38,6 +40,8 @@ const Events = ({pastEvents, upcomingEvents}) => {
             dateAndLocation={pastEvent.data.dateAndLocation} 
             description={pastEvent.data.description} 
             image={pastEvent.data.image}
+
+            key={pastEvent.data.title}
             />
         );
       })}
