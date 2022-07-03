@@ -28,6 +28,8 @@ const Articles = ({articles}) => {
             date={article.data.date}
             excerpt={article.data.excerpt}
             slug={article.data.slug}
+
+            key={article.title}
             />
           );
         })}
