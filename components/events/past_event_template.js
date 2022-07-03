@@ -4,7 +4,7 @@ import styles from '../../styles/event_template.module.css'
 
 import { useState } from 'react'
 
-const EventTemplate = (props) => {
+const PastEventTemplate = (props) => {
   const [isLearnMoreButtonClicked, setIsLearnMoreButtonClicked] = useState(false);
   return (
     <div className={styles.event}>
@@ -31,7 +31,7 @@ const EventTemplate = (props) => {
   )
 }
 
-export default EventTemplate
+export default PastEventTemplate
 
 /*
 HTML & CSS & Javascript Approach: 

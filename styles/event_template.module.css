@@ -32,7 +32,7 @@
   background-color: var(--red-color);
   color: white;
 
-  padding: 0.25rem 0.4rem 0.25rem 0.4rem;
+  padding: 0.5rem 0.4rem 0.5rem 0.4rem;
   border-style: solid;
   border-color: var(--red-color);
   border-radius: 10px;
@@ -54,4 +54,12 @@
   color: white;
   font-size: 12px;
   line-height: 1.5rem;
+}
+
+.event__button--margin-right {
+  margin-right: 1rem;
+}
+
+.event__button--padding {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
 }
