@@ -44,11 +44,15 @@ export default Articles
 
 export async function getStaticProps() {
   const files = fs.readdirSync('articles');
-  const articles = files.map((file) => {
+  const articles = [];
+  files.forEach((file) => {
     const rawArticle = fs.readFileSync(path.join('articles', file), 'utf-8');
     const articleObject = matter(rawArticle);
-    return articleObject;
+    articles.push(articleObject)
   })
+
+  console.log(articles);
+
   return {
     props: {
       articles: JSON.parse(JSON.stringify(articles)),
