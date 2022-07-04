@@ -1,3 +1,10 @@
+
+.title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
 /*OUR STORY*/
 
 .our-story {
@@ -7,13 +14,6 @@
   Parent Div's Width = Child Div's Width + Padding + Border + Margin
   375px = 360px + 0px + 0px + margin: auto, so (7.5px + 7.5px) 
   */
-}
-
-.our-story__title {
-  text-align: center;
-
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
 }
 
 .line {
@@ -70,7 +70,7 @@
 }
 
 .our-story__logo--animation {
-  animation: rotation 2s;
+  animation: rotation 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -83,17 +83,12 @@
     transform: rotate(359deg);
   }
 }
+
 /*Our Values*/
 .ourValues {
   width: 360px;
   margin: auto;
   margin-bottom: 4rem;
-}
-
-.ourValues__title {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .ourValues__container {
@@ -106,11 +101,11 @@
   margin-bottom: 1rem;
 }
 
-/*MEET OUR TEAM*/
-.meet-our-team__title {
-  text-align: center;
-  margin: 1rem 0rem 0.5rem 0rem;
+.ourValues__threePrinciplesContainer {
+  display: none;
 }
+
+/*MEET OUR TEAM*/
 
 .meet-our-team__title--large-size {
   font-size: 30px;
@@ -152,7 +147,7 @@
 
 .team-member__description-container {
   width: auto;
-  padding: 0.3rem 0.5rem 0.5rem 1.5rem;
+  padding: 0.3rem 0rem 0.5rem 1.5rem;
 }
 
 .team-member__name {
@@ -165,4 +160,136 @@
 
 .team-member--font-size-small {
   font-size: 13px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .title {
+    font-size: 50px;
+  }
+  .meet-our-team--grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .team-member__image {
+    width: 105px;
+  }
+
+  .team-member--font-size-large {
+    font-size: 20px;
+  }
+
+  .team-member--font-size-small {
+    font-size: 13px;
+  }
+
+
+  .ourValues--flexbox {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ourValues {
+    width: 700px;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .ourValues__threePrinciplesContainer {
+    width: 160px;
+    padding-right: 60px;
+    display: block;
+  }
+
+  .ourValues__principle {
+    font-size: 20px;
+    margin-bottom: 2rem;
+
+    background-color: black;
+    color: white;
+    padding: 1rem 0.6rem 1rem 0.6rem;
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .ourValues__blueContainers {
+    width: 500px;
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+  .meet-our-team--grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+  }
+
+  .team-member__image {
+    width: 130px;
+  }
+
+  .ourValues {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .ourValues__blueContainers {
+    width: 600px;
+  }
+
+  .ourValues__paragraph {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+
+  .ourValues__threePrinciplesContainer {
+    width: 400px;
+  }
+  
+  .ourValues__principle {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 25px;
+  }
+
+  .our-story {
+    width: 1000px;
+    margin: auto;
+    /*
+    Parent Div's Width = Child Div's Width + Padding + Border + Margin
+    375px = 360px + 0px + 0px + margin: auto, so (7.5px + 7.5px) 
+    */
+  }
+
+  .our-story__red-container {
+    width: 500px;
+    margin-right: 5rem;
+  }
+
+  .our-story__description {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+
+  .our-story__logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .our-story__logo {
+    width: 150px;
+  }
+
+  .our-storyflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
