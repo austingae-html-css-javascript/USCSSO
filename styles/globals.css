@@ -67,6 +67,7 @@
   padding: 0px;
   border: none;
 }
+
 .nav-bar__hamburger-menu-icon {
   color: var(--black-color);
   
@@ -149,4 +150,22 @@
 .menu__linkedin-icon, 
 .menu__instagram-icon {
   margin-right: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar__hamburger-menu-button {
+  display: none;
+  }
+
+  .nav-bar__link {
+    display: block;
+    margin-right: 1.5rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav-bar__link:hover {
+    color: var(--red-color);
+  }
 }

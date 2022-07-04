@@ -264,23 +264,8 @@
     column-gap: 1rem;
   }
 
-  .our-story {
-    width: 1500px;
-  }
-
-  .our-story__description {
-    width: 800px;
-    font-size: 25px;
-    line-height: 2.5rem;
-  }
-
   .ourValues__paragraph {
-    font-size: 25px;
     line-height: 2rem;
-  }
-
-  .ourValues__list {
-    font-size: 20px;
   }
 
   .team-member {
@@ -323,8 +308,6 @@
 }
 
 @media screen and (min-width: 2500px) {
-
-
   .title {
     font-size: 70px;
   }
@@ -363,8 +346,6 @@
     line-height: 2rem;
   }
 
-  
-  
   .team-member {
     width: 700px;
   }
@@ -377,10 +358,3 @@
     font-size: 20px;
   }
 }
-
-
-
-/*
-Website looks good from 375px to 1500px
-*/
-
