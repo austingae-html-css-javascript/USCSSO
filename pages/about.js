@@ -9,18 +9,22 @@ const About = ({teamMemberList}) => {
       <section className={styles['our-story']}>
         <h1 className={styles.title}>Our Story</h1>
         <hr className={`${styles['line']} ${styles['line--short-size']} ${styles['line--red-color']}`}></hr>
-        <div className={styles['our-storyflex']}>
-          <div className={styles['our-story__red-container']}>
-            <p className={`${styles['our-story__description']} ${styles['rounded-corners-version-1']}`}>Founded in February 2020 at the George Washington University, the US-China Strategic Studies Organization was built to address the lack of holistic and unbiased study of Sino-American relations.</p>
-            <p className={`${styles['our-story__description']} ${styles['rounded-corners-version-2']}`}>Since its founding, the USCSSO has grown into a community of forward-thinking students analyzing, discussing, and building an understanding of US-China relations. Through weekly newsletters, events and community engagement, high-level research in various mediums, and a firm willingness to objectively analyze complex issues, USCSSO uplifts hardworking students and educates a wide audience on Sino-American relations.</p>
-          </div>
+        <p 
+        className={`${styles['our-story__description']} 
+                    ${styles['rounded-corners-version-1']} 
+                    ${styles['our-story__description-1--margin-left-auto']}
+                    ${styles['our-story__description-1--margin-bottom']}`}>Founded in February 2020 at the George Washington University, the US-China Strategic Studies Organization was built to address the lack of holistic and unbiased study of Sino-American relations.</p>
+        <div className={styles['ourStoryBottomContainer']}>
+          <p className={`${styles['our-story__description']} ${styles['rounded-corners-version-2']}`}>Since its founding, the USCSSO has grown into a community of forward-thinking students analyzing, discussing, and building an understanding of US-China relations. Through weekly newsletters, events and community engagement, high-level research in various mediums, and a firm willingness to objectively analyze complex issues, USCSSO uplifts hardworking students and educates a wide audience on Sino-American relations.</p>
           <div className={styles['our-story__logo-container']}>
             <img 
             className={`${styles['our-story__logo']} ${styles['our-story__logo--animation']}`}
             src="/images/uscsso-logo.png"
             />
           </div>
+
         </div>
+
       </section>
 
       <section className={styles.ourValues}>
@@ -55,7 +59,7 @@ const About = ({teamMemberList}) => {
       </section>
 
       <section className={styles['meet-our-team']}>
-        <h1 className={`${styles.title} ${styles['meet-our-team__title--large-size']}`}>MEET OUR TEAM</h1>
+        <h1 className={`${styles.title} ${styles['meet-our-team__title--large-size']}`}>Meet Our Team</h1>
         <hr className={`${styles['line']} ${styles['line--long-size']}`} />
 
         <div className={styles['meet-our-team--grid']}>
@@ -80,8 +84,6 @@ const About = ({teamMemberList}) => {
         </div>
 
       </section>
-
-
     </main>
   )
 }

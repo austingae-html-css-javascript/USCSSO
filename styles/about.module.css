@@ -47,7 +47,9 @@
   padding: 1.2rem;
   font-size: 14px;
   line-height: 1.3rem;
+}
 
+.our-story__description-1--margin-bottom {
   margin-bottom: 1rem;
 }
 
@@ -61,12 +63,10 @@
   border-bottom-right-radius: 1rem;
 }
 
-.our-story__logo-container {
-  text-align: center;
-}
-
 .our-story__logo {
   width: 110px;
+  display: block;
+  margin-inline: auto;
 }
 
 .our-story__logo--animation {
@@ -169,6 +169,30 @@
   .title {
     font-size: 50px;
   }
+
+  .our-story {
+    width: 500px;
+    margin: auto;
+  }
+
+  .our-story__description {
+    padding: 1.8rem; 
+    font-size: 17px;
+    line-height: 1.6rem;
+  }
+
+  .ourValues {
+    width: 500px;
+    margin: auto;
+  }
+
+  .ourValues__paragraph {
+    padding: 1.8rem;
+    font-size: 17px;
+    line-height: 1.8rem;
+  }
+
+  /*Meet Our Team Goes From One Column to a Grid with Two Columns*/
   .meet-our-team--grid {
     display: grid;
     grid-template-rows: auto;
@@ -181,115 +205,43 @@
   }
 
   .team-member--font-size-large {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .team-member--font-size-small {
     font-size: 13px;
   }
-
-
-  .ourValues--flexbox {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .ourValues {
-    width: 700px;
-    margin: auto;
-    margin-bottom: 4rem;
-  }
-
-  .ourValues__threePrinciplesContainer {
-    width: 160px;
-    padding-right: 60px;
-    display: block;
-  }
-
-  .ourValues__principle {
-    font-size: 20px;
-    margin-bottom: 2rem;
-
-    background-color: black;
-    color: white;
-    padding: 1rem 0.6rem 1rem 0.6rem;
-    width: auto;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .ourValues__blueContainers {
-    width: 500px;
-  }
-
 }
 
-@media screen and (min-width: 1500px) {
-  .meet-our-team--grid {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto auto;
-  }
-
-  .team-member__image {
-    width: 130px;
-  }
-
-  .ourValues {
-    width: 1000px;
-    margin: auto;
-    margin-bottom: 4rem;
-  }
-
-  .ourValues__blueContainers {
-    width: 600px;
-  }
-
-  .ourValues__paragraph {
-    font-size: 20px;
-    line-height: 2rem;
-  }
-
-  .ourValues__threePrinciplesContainer {
-    width: 400px;
-  }
-  
-  .ourValues__principle {
-    padding: 1.5rem 1rem 1.5rem 1rem;
-    font-size: 25px;
-  }
+@media screen and (min-width: 1200px) {
 
   .our-story {
     width: 1000px;
     margin: auto;
-    /*
-    Parent Div's Width = Child Div's Width + Padding + Border + Margin
-    375px = 360px + 0px + 0px + margin: auto, so (7.5px + 7.5px) 
-    */
-  }
-
-  .our-story__red-container {
-    width: 500px;
-    margin-right: 5rem;
-  }
+  } 
 
   .our-story__description {
-    font-size: 20px;
-    line-height: 2rem;
+    width: 500px;
+  }
+
+  .ourStoryBottomContainer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+  .our-story__description-1--margin-left-auto {
+      margin-left: auto;
   }
 
   .our-story__logo-container {
+    width: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-
-  .our-story__logo {
-    width: 150px;
-  }
-
-  .our-storyflex {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
   }
-}
+
+/*
+Website looks good from 375px to 1200px
+*/
