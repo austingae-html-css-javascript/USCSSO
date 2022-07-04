@@ -336,7 +336,7 @@
 
   .our-story__description {
     width: 800px;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 3rem;
   }
 
@@ -354,7 +354,7 @@
   }
 
   .ourValues__paragraph {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 3rem;
   }
 
@@ -370,11 +370,11 @@
   }
 
   .team-member--font-size-large {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .team-member--font-size-small {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
