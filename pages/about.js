@@ -46,7 +46,7 @@ const About = ({teamMemberList}) => {
               <p className={styles.ourValues__paragraph}>To remain nonpartisan in analysis, discussion, and research, the USCSSO is committed to not being a policy-recommending institution, refraining from subjectivity and opinion, and always operating with honesty.</p>
               <ul>
                 <li>By not recommending policy, we remove the potential for an influx of bias.</li>
-                <li>By refraining from subjectivity and opinion, we ensure contributors' valid political leanings do not influence USCSSO content.</li>
+                <li>By refraining from subjectivity and opinion, we ensure contributors&apos; valid political leanings do not influence USCSSO content.</li>
                 <li>By operating with honesty, and maintaining a mindset of improvement and revision, we can fix mistakes and take lessons from the community. </li>
               </ul>
             </div>
