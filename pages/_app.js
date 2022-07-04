@@ -26,16 +26,18 @@ function MyApp({ Component, pageProps }) {
     <>
       {/* Navigation Bar*/}
       <nav className={'nav-bar'}>
-        <div className='nav-bar__left-container'>
-          <h1 className="nav-bar__org-name">USCSS</h1>
-          <Image 
-          className='nav-bar__logo'
-          alt={"Hello, there"}
-          src={logo}
-          width={'40px'}
-          height={'40px'}
-          />
-        </div>
+        <Link href='/'>
+          <div className='nav-bar__left-container'>
+            <h1 className="nav-bar__org-name">USCSS</h1>
+            <Image 
+            className='nav-bar__logo'
+            alt={"Hello, there"}
+            src={logo}
+            width={'40px'}
+            height={'40px'}
+            />
+          </div>
+        </Link>
 
         <div className='nav-bar__right-container'>
           <button 

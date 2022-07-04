@@ -16,38 +16,47 @@
   margin-bottom: 0.3rem;
 }
 
-.our-story__line {
+.line {
   margin: 0rem auto 0rem auto;
   margin-bottom: 1rem;
   border-style: solid;
   border-width: 0.1rem;
   color: var(--red-color);
+  color: black;
 }
 
-.our-story__line--short-size {
+.line--red-color {
+  color: var(--red-color);
+}
+
+.line--blue-color {
+  color: var(--blue-color);
+}
+
+.line--short-size {
   width: 40%;
 }
 
-.our-story__line--long-size {
+.line--long-size {
   width: 80%;
 }
 
 .our-story__description {
   color: var(--light-white-color);
   background-color: var(--red-color);
-  padding: 0.7rem;
+  padding: 1.2rem;
   font-size: 14px;
   line-height: 1.3rem;
 
   margin-bottom: 1rem;
 }
 
-.our-story__description--rounded-corners-version-1 {
+.rounded-corners-version-1 {
   border-top-right-radius: 2rem;
   border-bottom-left-radius: 1rem;
 }
 
-.our-story__description--rounded-corners-version-2 {
+.rounded-corners-version-2 {
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 1rem;
 }
@@ -58,6 +67,43 @@
 
 .our-story__logo {
   width: 110px;
+}
+
+.our-story__logo--animation {
+  animation: rotation 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/*Our Values*/
+.ourValues {
+  width: 360px;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.ourValues__title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ourValues__container {
+  color: var(--light-white-color);
+  background-color: var(--blue-color);
+  padding: 1.2rem;
+  font-size: 14px;
+  line-height: 1.3rem;
+
+  margin-bottom: 1rem;
 }
 
 /*MEET OUR TEAM*/

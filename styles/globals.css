@@ -42,6 +42,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  
+  cursor: pointer;
 }
 
 .nav-bar__org-name {
@@ -67,6 +69,8 @@
 }
 .nav-bar__hamburger-menu-icon {
   color: var(--black-color);
+  
+  cursor: pointer;
 }
 
 .nav-bar__link {
@@ -94,6 +98,8 @@
   position: absolute;
   top: 30px;
   right: 30px;
+
+  cursor: pointer;
 }
 
 .menu__links-container {

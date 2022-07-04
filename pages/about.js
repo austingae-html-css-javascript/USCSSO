@@ -8,18 +8,38 @@ const About = ({teamMemberList}) => {
     <main>
       <section className={styles['our-story']}>
         <h1 className={styles['our-story__title']}>Our Story</h1>
-        <hr className={`${styles['our-story__line']} ${styles['our-story__line--short-size']}`}></hr>
-        <p className={`${styles['our-story__description']} ${styles['our-story__description--rounded-corners-version-1']}`}>Founded in February 2020 at the George Washington University, the US-China Strategic Studies Organization was built to address the lack of holistic and unbiased study of Sino-American relations.</p>
+        <hr className={`${styles['line']} ${styles['line--short-size']} ${styles['line--red-color']}`}></hr>
+        <p className={`${styles['our-story__description']} ${styles['rounded-corners-version-1']}`}>Founded in February 2020 at the George Washington University, the US-China Strategic Studies Organization was built to address the lack of holistic and unbiased study of Sino-American relations.</p>
         <div className={styles['our-story__bottom-container']}>
-          <p className={`${styles['our-story__description']} ${styles['our-story__description--rounded-corners-version-2']}`}>Since its founding, the USCSSO has grown into a community of forward-thinking students analyzing, discussing, and building an understanding of US-China relations. Through weekly newsletters, events and community engagement, high-level research in various mediums, and a firm willingness to objectively analyze complex issues, USCSSO uplifts hardworking students and educates a wide audience on Sino-American relations.</p>
+          <p className={`${styles['our-story__description']} ${styles['rounded-corners-version-2']}`}>Since its founding, the USCSSO has grown into a community of forward-thinking students analyzing, discussing, and building an understanding of US-China relations. Through weekly newsletters, events and community engagement, high-level research in various mediums, and a firm willingness to objectively analyze complex issues, USCSSO uplifts hardworking students and educates a wide audience on Sino-American relations.</p>
           <div className={styles['our-story__logo-container']}>
-            <img className={styles['our-story__logo']} src="/images/uscsso-logo.png" />
+            <img 
+            className={`${styles['our-story__logo']} ${styles['our-story__logo--animation']}`}
+            src="/images/uscsso-logo.png"
+            />
           </div>
         </div>
       </section>
+
+      <section className={styles.ourValues}>
+        <h1 className={styles.ourValues__title}>Our Values</h1>
+        <hr className={`${styles['line']} ${styles['line--short-size']} ${styles['line--blue-color']}`}></hr>
+        <div className={`${styles['ourValues__container']} ${styles['rounded-corners-version-1']}`}>
+          <p className={styles.ourValues__paragraph}>We were founded with a guiding principle that discourse in international affairs and US-China relations particularly, could be elevated with more platforms for unbiased exchange. On college campuses and in cities such as Washington DC, it is difficult to find places that bring together people with multipartisan viewpoints to study partisan issues. So, even though USCSSO contributors and members come from all across political, cultural, and social spectrums, we are all dedicated to upholding nonpartisan and collaborative environments.</p>
+        </div>
+        <div className={`${styles['ourValues__container']} ${styles['rounded-corners-version-2']}`}>
+          <p className={styles.ourValues__paragraph}>To remain nonpartisan in analysis, discussion, and research, the USCSSO is committed to not being a policy-recommending institution, refraining from subjectivity and opinion, and always operating with honesty.</p>
+          <ul>
+            <li>By not recommending policy, we remove the potential for an influx of bias.</li>
+            <li>By refraining from subjectivity and opinion, we ensure contributors' valid political leanings do not influence USCSSO content.</li>
+            <li>By operating with honesty, and maintaining a mindset of improvement and revision, we can fix mistakes and take lessons from the community. </li>
+          </ul>
+        </div>
+      </section>
+
       <section className={styles['meet-our-team']}>
         <h1 className={`${styles['meet-our-team__title']} ${styles['meet-our-team__title--large-size']}`}>MEET OUR TEAM</h1>
-        <hr className={`${styles['our-story__line']} ${styles['our-story__line--long-size']}`} />
+        <hr className={`${styles['line']} ${styles['line--long-size']}`} />
       {teamMemberList.map((teamMember) => {
         return (
           <div className={styles['team-member']} key={teamMember.name}>
@@ -31,14 +51,16 @@ const About = ({teamMemberList}) => {
             </div>
             <div className={styles['team-member__description-container']}>
               <h4 className={`${styles['team-member__name']} ${styles['team-member--font-size-large']}`}>{teamMember.name}</h4>
-              <p className={`${styles['team-member__year']} ${styles['team-member--font-size-small']}`}>{teamMember.year}</p>
-              <p className={`${styles['team-member__major']} ${styles['team-member--font-size-small']}`}>{teamMember.major}</p>
-              <p className={`${styles['team-member__role']} ${styles['team-member--font-size-small']}`}>{teamMember.role}</p>
+              <p className={`${styles['team-member__year']} ${styles['team-member--font-size-small']}`}>Year: {teamMember.year}</p>
+              <p className={`${styles['team-member__major']} ${styles['team-member--font-size-small']}`}>Major: {teamMember.major}</p>
+              <p className={`${styles['team-member__role']} ${styles['team-member--font-size-small']}`}>Role: {teamMember.role}</p>
             </div>
           </div>
         );
       })}
       </section>
+
+
     </main>
   )
 }
