@@ -14,7 +14,6 @@ const ArticleTemplate = (props) => {
             <p className={styles.article__excerpt}>{props.excerpt}</p>
         </div>
     </Link>
-    <hr className={styles.article__linebreak}></hr>
   </>
   );
 }

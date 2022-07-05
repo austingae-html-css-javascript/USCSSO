@@ -1,6 +1,6 @@
 ---
 title: 'The Responses of US and China towards the Russia-Ukraine War: An Overview'
-date: March 29
+date: "2022-03-29"
 author: 'Anne Lee'
 excerpt: 'Throughout the Russia-Ukraine conflict, the US and China have displayed conflicting attitudes.'
 image: '/images/articles/us-china-russia-ukraine-war.webp'

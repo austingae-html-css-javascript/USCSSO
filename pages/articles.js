@@ -48,10 +48,22 @@ export async function getStaticProps() {
   files.forEach((file) => {
     const rawArticle = fs.readFileSync(path.join('articles', file), 'utf-8');
     const articleObject = matter(rawArticle);
-    articles.push(articleObject)
+    articles.push({content: articleObject.content, data: articleObject.data, formattedDate: new Date (articleObject.data.date)}); //You add the entire articleObject with (...articleObject) but you also add formattedDate
   })
 
-  console.log(articles);
+  /*I have sorted the articles array by formattedDate to get 
+  the articles with the newest formattedDates at the front and the articles
+  with the oldest formattedDates at the end. 
+
+  https://bobbyhadz.com/blog/javascript-sort-array-of-objects-by-date-property
+  */
+  articles.sort((a, b) => {
+    return b.formattedDate - a.formattedDate
+  })
+
+  articles.forEach((article) => {
+    console.log(article.data);
+  })
 
   return {
     props: {

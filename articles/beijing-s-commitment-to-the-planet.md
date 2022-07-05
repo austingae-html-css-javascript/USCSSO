@@ -1,6 +1,6 @@
 ---
 title: "Beijing's Commitment to the Planet"
-date: "March 09"
+date: "2022-03-09"
 author: 'Dominic Nozzarella'
 excerpt: "China has taken steps to tackle climate change but its status as the world’s largest carbon emitter have led many to question the sincerity of Beijing’s commitment to climate action."
 image: '/images/articles/energy-planet.webp'

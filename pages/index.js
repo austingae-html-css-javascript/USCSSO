@@ -82,14 +82,14 @@ export default function Home({upcomingEvents, articles}) {
             {articles.map((article) => {
               return (
                 <ArticleTemplate 
-                  title={article.title}
-                  image={article.image}
-                  author={article.author}
-                  date={article.date}
-                  excerpt={article.excerpt}
-                  slug={article.slug}
+                  title={article.data.title}
+                  image={article.data.image}
+                  author={article.data.author}
+                  date={article.data.date}
+                  excerpt={article.data.excerpt}
+                  slug={article.data.slug}
 
-                  key={article.title}
+                  key={article.data.title}
                 />
               );
             })}
@@ -138,10 +138,16 @@ export async function getStaticProps() {
     const rawArticle = fs.readFileSync(path.join('articles', article), 'utf-8');
     const articleObject = matter(rawArticle);
     const articleObjectData = articleObject.data;
-    articles.push(articleObjectData);
+    articles.push({data: articleObjectData, formattedDate : new Date(articleObjectData.date)});
   })
 
-  console.log(articles);
+  //I sorted the articles array from newest formattedDate to oldest formattedDate
+  articles.sort((a, b) => {
+    return b.formattedDate - a.formattedDate;
+  })
+
+  //I deleted everything in articles array after position: 3 in the array. Why? On the Home Page, I only want to showcase the newest three articles -- not all the articles.
+  articles.splice(3, articles.length);
 
   return {
     props: {
